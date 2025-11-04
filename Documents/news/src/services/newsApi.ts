@@ -2,7 +2,9 @@ import axios from 'axios';
 
 // NewsAPI configuration
 const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY || '58ab77b0d7d94b45ac0270d527c44ff2'; // API key จาก https://newsapi.org/
-const NEWS_API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://newsapi.org/v2/';
+// ใช้ proxy สำหรับ development และ direct API สำหรับ production
+const NEWS_API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 
+  (import.meta.env.DEV ? '/api' : 'https://newsapi.org/v2/');
 
 // สร้าง instance สำหรับเรียก API
 const newsApi = axios.create({
@@ -10,9 +12,33 @@ const newsApi = axios.create({
   headers: {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*',
   },
-  timeout: 10000,
+  withCredentials: false,
+  timeout: 15000,
 });
+
+// แก้ไข preflight request issue
+newsApi.interceptors.request.use((config) => {
+  // ถ้าเป็น development ให้เพิ่ม headers พิเศษ
+  if (import.meta.env.DEV) {
+    config.headers['X-Requested-With'] = 'XMLHttpRequest';
+  }
+  return config;
+});
+
+// แก้ไข response error handling
+newsApi.interceptors.response.use(
+  (response) => response,
+  async (error) => {
+    // ถ้าเป็น CORS error ให้ลองใช้ CORS proxy
+    if (error.code === 'ERR_NETWORK' || error.message?.includes('CORS')) {
+      console.warn('CORS error detected, trying fallback...');
+      // สามารถเพิ่ม fallback logic ที่นี่
+    }
+    return Promise.reject(error);
+  }
+);
 
 // Interface สำหรับข่าว
 export interface Article {
