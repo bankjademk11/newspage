@@ -2,11 +2,16 @@ import axios from 'axios';
 
 // NewsAPI configuration
 const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY || '58ab77b0d7d94b45ac0270d527c44ff2'; // API key จาก https://newsapi.org/
-const NEWS_API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://newsapi.org/v2';
+const NEWS_API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://newsapi.org/v2/';
 
 // สร้าง instance สำหรับเรียก API
 const newsApi = axios.create({
   baseURL: NEWS_API_BASE_URL,
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+  },
+  timeout: 10000,
 });
 
 // Interface สำหรับข่าว
