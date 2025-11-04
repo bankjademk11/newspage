@@ -1,0 +1,42 @@
+{
+  "header": {
+    "title": "ຂ່າວລາວ",
+    "home": "ໜ້າຫຼັກ",
+    "gallery": "ຮູບພາບ",
+    "search": "ຄົ້ນຫາ",
+    "language": "ພາສາ"
+  },
+  "categories": {
+    "business": "ທຸລະກິດ",
+    "entertainment": "ບັນເທິງ",
+    "general": "ທົ່ວໄປ",
+    "health": "ສຸຂະພາບ",
+    "science": "ວິທະຍາສາດ",
+    "sports": "ກິລາ",
+    "technology": "ເຕັກໂນໂລຍີ"
+  },
+  "news": {
+    "latest": "ຂ່າວລ່າສຸດ",
+    "breaking": "ເດັ່ນດ່ຽວ",
+    "noNews": "ບໍ່ພົບຂ່າວທີ່ທ່ານກຳລັງຊອກຫາ",
+    "searchResults": "ຜົນການຄົ້ນຫາ",
+    "found": "ພົບ",
+    "articles": "ບົດຄວາມ",
+    "by": "ໂດຍ",
+    "readMore": "ອ່ານເພີ່ມເຕີມ",
+    "translate": "ແປພາສາ",
+    "share": "ແບ່ງປັນ",
+    "timeAgo": {
+      "justNow": "ມື້ນີ້",
+      "hoursAgo": "ຊົ່ວໂມງທີ່ແລ້ວ",
+      "daysAgo": "ວັນທີ່ແລ້ວ"
+    }
+  },
+  "search": {
+    "placeholder": "ຄົ້ນຫາຂ່າວ...",
+    "button": "ຄົ້ນຫາ"
+  },
+  "loading": "ກຳລັງໂຫຼດ...",
+  "error": "ບໍ່ສາມາດດຶງຂໍ້ມູນຂ່າວໄດ້ ກະລຸນາລອງໃໝ່ອີກຄັ້ງ",
+  "retry": "ລອງໃໝ່"
+}

@@ -1,0 +1,42 @@
+{
+  "header": {
+    "title": "News",
+    "home": "Home",
+    "gallery": "Gallery",
+    "search": "Search",
+    "language": "Language"
+  },
+  "categories": {
+    "business": "Business",
+    "entertainment": "Entertainment",
+    "general": "General",
+    "health": "Health",
+    "science": "Science",
+    "sports": "Sports",
+    "technology": "Technology"
+  },
+  "news": {
+    "latest": "Latest News",
+    "breaking": "Breaking",
+    "noNews": "No news found",
+    "searchResults": "Search Results",
+    "found": "Found",
+    "articles": "articles",
+    "by": "By",
+    "readMore": "Read More",
+    "translate": "Translate",
+    "share": "Share",
+    "timeAgo": {
+      "justNow": "Just now",
+      "hoursAgo": "hours ago",
+      "daysAgo": "days ago"
+    }
+  },
+  "search": {
+    "placeholder": "Search news...",
+    "button": "Search"
+  },
+  "loading": "Loading...",
+  "error": "Unable to fetch news. Please try again.",
+  "retry": "Retry"
+}
