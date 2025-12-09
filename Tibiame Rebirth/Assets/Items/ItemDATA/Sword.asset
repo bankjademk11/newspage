@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53c27acff73c544f82f3d8a0ae52f79, type: 3}
+  m_Name: Sword
+  m_EditorClassIdentifier: 
+  itemName: BootsOld
+  description: Mock
+  icon: {fileID: -521423717, guid: 168a5b3f9dda7b04c92b711e8fb1ab47, type: 3}
+  itemType: 2
+  rarity: 0
+  isConsumable: 0
+  healAmount: 0
+  manaRestore: 0
+  isStackable: 0
+  maxStackSize: 99
+  attackPower: 15
+  defense: 4
+  speed: 0
+  equipmentType: 1
+  isEquippable: 1
+  price: 100
+  sellPrice: 50
+  requiredLevel: 1
+  itemLevel: 1
+  weight: 1

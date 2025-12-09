@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74ff5b0e1fa98f34a907fe39e75f4700, type: 3}
+  m_Name: OrcData
+  m_EditorClassIdentifier: 
+  enemyName: Orc
+  description: A dangerous enemy
+  level: 2
+  enemyType: 0
+  maxHealth: 75
+  healthRegen: 0
+  attack: 8
+  defense: 4
+  speed: 2
+  accuracy: 80
+  evasion: 10
+  aiMode: 0
+  detectionRange: 6
+  attackRange: 1.5
+  moveSpeed: 2.5
+  attackSpeed: 0.5263158
+  stopChaseDistance: 10
+  experienceReward: 15
+  goldReward: 8
+  dropItems: []
+  dropChance: 0.1
+  enemySprite: {fileID: 0}
+  enemyColor: {r: 1, g: 1, b: 1, a: 1}
+  enemySize: {x: 1, y: 1}
+  deathEffectPrefab: {fileID: 0}
+  attackSound: {fileID: 0}
+  hurtSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  abilities: []
