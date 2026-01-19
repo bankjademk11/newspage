@@ -1,10 +1,7 @@
 import axios from 'axios';
 
-// NewsAPI configuration
-const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY || '58ab77b0d7d94b45ac0270d527c44ff2'; // API key จาก https://newsapi.org/
-// ใช้ proxy สำหรับ development และ direct API สำหรับ production
-const NEWS_API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 
-  (import.meta.env.DEV ? '/api' : 'https://newsapi.org/v2/');
+// ใช้ proxy สำหรับ development และ production
+const NEWS_API_BASE_URL = '/api';
 
 // สร้าง instance สำหรับเรียก API
 const newsApi = axios.create({
@@ -68,7 +65,6 @@ export const getTopHeadlines = async (category?: string): Promise<NewsResponse> 
     const response = await newsApi.get('/top-headlines', { 
       params: {
         ...params,
-        apiKey: NEWS_API_KEY,
         country: 'us', // เปลี่ยนเป็น 'us' เพราะข่าวไทยมีน้อย
         pageSize: 20,
       }
@@ -88,7 +84,6 @@ export const searchNews = async (query: string): Promise<NewsResponse> => {
         q: query,
         sortBy: 'publishedAt',
         language: 'th',
-        apiKey: NEWS_API_KEY,
         domains: 'bangkokpost.com,thaipbsworld.com,nationthailand.com,khaosod.co.th,matichon.co.th,thairath.co.th,manager.co.th',
       },
     });
@@ -103,7 +98,7 @@ export const searchNews = async (query: string): Promise<NewsResponse> => {
 export const getNewsByCategory = async (category: string): Promise<NewsResponse> => {
   try {
     const response = await newsApi.get('/top-headlines', {
-      params: { category, country: 'us', apiKey: NEWS_API_KEY },
+      params: { category, country: 'us' },
     });
     return response.data;
   } catch (error) {
